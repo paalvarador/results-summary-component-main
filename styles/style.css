@@ -221,7 +221,7 @@ main {
 /********* BREAK POINTS **********/
 /********** Mobile 375 px ********/
 
-@media screen and (max-width: 390px) {    
+@media screen and (max-width: 375px) {    
     main {
         align-items: flex-start;
     }
