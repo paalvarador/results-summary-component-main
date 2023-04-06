@@ -1,0 +1,282 @@
+:root{ 
+    /* Primary Colors */
+    --color-light-red: hsl(0, 100%, 67%);
+    --color-orangey-yellow: hsl(39, 100%, 56%);
+    --color-green-teal: hsl(166, 100%, 37%);
+    --color-cobalt-blue: hsl(234, 85%, 45%);
+
+    --color-background-light-red: hsla(0, 100%, 67%, 0.1);
+    --color-background-orangey-yellow: hsla(39, 100%, 56%, 0.1);
+    --color-background-green-teal: hsla(166, 100%, 37%, 0.1);
+    --color-background-cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
+    /* Gradient Colors */
+    --color-gradient-light-state-blue: hsl(252, 100%, 67%);
+    --color-gradient-light-royal-blue: hsl(241, 81%, 54%);
+    --color-gradient-violet-blue: hsla(256, 72%, 46%, 1);
+    --color-gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral Colors */
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray: hsl(240, 13%, 65%);
+    --color-pale-blue: hsl(221, 100%, 96%);
+    --color-light-lavander: hsl(241, 100%, 89%);
+    --color-dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Fonts */
+    --font-family: 'Hanken Grotesk', sans-serif;
+    --font-low-size: 9px;
+    --font-low-medium-size: 12px;
+    --font-normal-size: 18px;
+    --font-large-size: 40px;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-pale-blue);
+    font-family: var(--font-family);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 490px;
+    height: 345px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+/*** Styes for left side (Card Result) ****/
+.card-result {
+    display: block;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-image: linear-gradient(to bottom, var(--color-gradient-violet-blue), var(--color-gradient-light-royal-blue));
+    color: var(--color-white);
+    border-radius: 20px;
+}
+
+.card-result-header{
+    padding: 1.5rem 0 0.5rem 0;
+    color: var(--color-light-lavander);
+    font-size: var(--font-normal-size);
+}
+
+.card-result-main {
+    background-image: linear-gradient(to bottom, var(--color-gradient-violet-blue), var(--color-cobalt-blue));
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-avarage {
+    font-size: var(--font-large-size);
+}
+
+.total-avarage {
+    font-size: var(--font-low-size);
+    color: var(--color-light-lavander);
+}
+
+.card-result-footer {
+    padding: 1rem 2rem;
+}
+
+.card-result-footer h1 {
+    padding-bottom: 1rem;
+}
+
+.card-result-footer p {
+    color: var(--color-light-lavander);
+    font-size: var(--font-low-medium-size);
+    padding: 0 0.8rem;
+}
+
+
+/**** Styles for the right side (Card Summary) ****/
+.card-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 1.2rem;
+}
+
+.card-summary-header p{
+    font-size: var(--font-normal-size);
+    color: var(--color-dark-gray-blue);
+    font-weight: var(--font-weight-700);
+}
+
+.summary-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.2rem 0;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: var(--font-low-medium-size);
+}
+
+.item-icon {
+    width: 12px;
+}
+
+.reaction {
+    background-color: var(--color-background-light-red);
+    
+}
+
+.item-category {
+    padding-left: 5px;
+}
+
+.reaction .item-category {
+    color: var(--color-light-red);
+}
+
+.memory {
+    background-color: var(--color-background-orangey-yellow);
+}
+
+.memory .item-category {
+    color: var(--color-orangey-yellow)
+}
+
+.verbal {
+    background-color: var(--color-background-green-teal);
+}
+
+.verbal .item-category {
+    color: var(--color-green-teal);
+}
+
+.visual {
+    background-color: var(--color-background-cobalt-blue);
+}
+
+.visual .item-category {
+    color: var(--color-cobalt-blue);
+}
+
+.item-score {
+    margin-left: auto;
+    color: var(--color-dark-gray-blue);
+    font-weight: var(--font-weight-800);
+    padding-right: 0.5rem;
+}
+
+.item-score-over {
+    color: var(--color-gray);
+    font-weight: var(--font-weight-700);
+}
+
+/* Button Style */
+.card-summary-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.card-summary-button{
+    width: 100%;
+    background-color: var(--color-dark-gray-blue);
+    text-align: center;
+    font-size: var(--font-low-medium-size);
+    padding: 0.7rem 0;
+    border-radius: 15px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.card-summary-button:hover {
+    background-image: linear-gradient(to bottom, var(--color-gradient-violet-blue), var(--color-gradient-light-royal-blue));
+}
+
+
+/********* BREAK POINTS **********/
+/********** Mobile 375 px ********/
+
+@media screen and (max-width: 375px) {    
+    main {
+        align-items: flex-start;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 0;
+        height: auto;
+    }
+
+    .card-result {
+        margin: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .card-result-header{
+        padding: 0.5rem 0 1.5rem;
+        font-size: var(--font-low-medium-size);
+    }
+
+    .card-result-footer {
+        padding: 0 2.5rem 1.5rem;
+    }
+
+    .card-result-footer h1{
+        padding-top: 0.5rem;
+        font-size: var(--font-normal-size);
+    }
+
+    .card-summary {
+        margin: 1rem 1.5rem;
+    }
+
+    .card-summary-header p {
+        font-size: var(--font-low-medium-size);
+    }
+
+    .card-summary-main {
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    .summary-list-item {
+        margin: 0.5rem 0;
+        padding: 1rem 1rem;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+
+
+
+
